@@ -1,56 +1,100 @@
+# Almabetter's Second Capstone Project: BookMyShow Website
 
-Almabetter's second Capstone project involves the creation of a BookMyShow website with a straightforward user interface that ensures ease of use and responsiveness across various devices. The project includes both frontend and backend components.
+## Project Overview
 
-Deployment Links:
+Almabetter's second Capstone project focuses on the development of a BookMyShow website, aiming for a user-friendly interface and optimal responsiveness across diverse devices. The project comprises both frontend and backend components.
 
-Frontend on render: https://frontend-bookingapp.onrender.com/
-Backend on render: https://backend-bookingapp.onrender.com/
-Installation:
-To run the project locally, follow these steps in your local IDE terminal:
+## Deployment Links
 
-For Frontend:
+- **Frontend on Render:** [https://frontend-bookingapp.onrender.com/](https://frontend-bookingapp.onrender.com/)
+- **Backend on Render:** [https://backend-bookingapp.onrender.com/](https://backend-bookingapp.onrender.com/)
 
-bash
-Copy code
+## Installation
+
+To run the project locally, perform the following steps in your local IDE terminal:
+
+**For Frontend:**
+```bash
 cd frontend
 npm install
 npm start
+```
 
-For Backend:
+ **Backend installation:**
 
-bash
-Copy code
+```bash
 cd backend
 npm install
 npm start
-This will start the frontend at http://localhost:3000 and the backend at http://localhost:8080.
+```
+# Backend Initialization
 
-How to Use:
-Visit https://frontend-bookingapp.onrender.com/ and follow these steps:
+This initiates the backend at [http://localhost:8080](http://localhost:8080).
 
-Select a movie.
-Choose a time schedule.
-Select seats.
-Click the "Book Now" button. A confirmation pop-up will appear, and on the right side of the screen, you can view the details of the previous movie ticket.
-Tech Stack:
+## How to Use
 
-Frontend: React js
-Backend: Node js, Express js
-Database: MongoDB
-MERN stack project
-Environment Variables:
-To run the project, add the following environment variables to your .env file, including your MongoDB cluster connect key and API_KEY.
+Visit [https://frontend-bookingapp.onrender.com/](https://frontend-bookingapp.onrender.com/) and follow these steps:
 
-API Documentation:
-Base URL: https://backend-bookingapp.onrender.com/
+1. **Select a Movie.**
+2. **Choose a Time Schedule.**
+3. **Select Seats.**
+4. **Click the "Book Now" Button.**
 
-Booking:
+Upon clicking, a confirmation pop-up will appear, and on the right side of the screen, you can review details of the previous movie ticket.
 
-GET /booking: Returns a list of the last bookings stored in the database in JSON format.
-POST /booking: Creates a new booking with the following parameters:
-movie (string, required): Your selected movie.
-slots (string, required): Your selected time.
-seats (number, required): Number of seats you have selected.
+## Tech Stack
 
+- **Frontend:** React.js
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Project Type:** MERN Stack Project
 
-Returns the newly created booking in JSON format.
+## Environment Variables
+
+To run the project successfully, ensure the following environment variables are added to your `.env` file, which should include your MongoDB cluster.
+
+```env
+MONGODB_CLUSTER_CONNECT_KEY=your_mongodb_cluster_connect_key
+```
+# API Documentation: Booking App
+
+## Base URL
+[https://backend-bookingapp.onrender.com/api/](https://backend-bookingapp.onrender.com/api/)
+
+### 1. Retrieve Bookings (GET /booking)
+
+#### Description
+The `GET /booking` endpoint is designed to provide a detailed list of the most recent bookings stored in the database. This information is presented in JSON format, offering insights into the latest transactions.
+
+#### Example Response
+```json
+[
+  {
+    "bookingId": "65a8c73372b31af5350106a2",
+    "movie": "The war with grandpa",
+    "slots": "03:00 PM",
+    "seats": {
+      "A1": null,
+      "A2": null,
+      "A3": 1,
+      "A4": null,
+      "D1": null,
+      "D2": null
+    },
+    "timestamp": null
+  }
+]
+
+```
+# Create a New Booking (POST /booking)
+
+## Description
+
+The `POST /booking` endpoint facilitates the creation of a new booking based on user input. Users are required to include specific parameters in the request body to successfully make a booking.
+
+## Parameters
+
+- `movie` (string, required): The name of the selected movie.
+- `slots` (string, required): The chosen time slot for the movie.
+- `seats` (number, required): The number of seats selected for the booking.
+  
