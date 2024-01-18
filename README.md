@@ -54,7 +54,7 @@ Upon clicking, a confirmation pop-up will appear, and on the right side of the s
 To run the project successfully, ensure the following environment variables are added to your `.env` file, which should include your MongoDB cluster.
 
 ```env
-MONGODB_CLUSTER_CONNECT_KEY=your_mongodb_cluster_connect_key
+MONGODBURI=your_mongodb_cluster_connect_key
 ```
 # API Documentation: Booking App
 
