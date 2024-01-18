@@ -61,12 +61,12 @@ MONGODB_CLUSTER_CONNECT_KEY=your_mongodb_cluster_connect_key
 ## Base URL
 [https://backend-bookingapp.onrender.com/api/](https://backend-bookingapp.onrender.com/api/)
 
-### 1. Retrieve Bookings (GET /booking)
+## 1. Retrieve Bookings (GET /booking)
 
-#### Description
+### Description
 The `GET /booking` endpoint is designed to provide a detailed list of the most recent bookings stored in the database. This information is presented in JSON format, offering insights into the latest transactions.
 
-#### Example Response
+### Example Response
 ```json
 [
   {
@@ -86,9 +86,9 @@ The `GET /booking` endpoint is designed to provide a detailed list of the most r
 ]
 
 ```
-# Create a New Booking (POST /booking)
+## Create a New Booking (POST /booking)
 
-## Description
+### Description
 
 The `POST /booking` endpoint facilitates the creation of a new booking based on user input. Users are required to include specific parameters in the request body to successfully make a booking.
 
